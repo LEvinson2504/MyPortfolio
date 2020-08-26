@@ -1,0 +1,21 @@
+.intro {
+  position: absolute;
+  top: 40vh;
+  left: 5vw;
+  width: 60vw;
+  font-size: 80px;
+}
+
+.intro h1 {
+  font-family: "prata", sans-serif;
+  font-size: 100px;
+  color: ghostwhite;
+}
+
+.intro .subtext {
+  font-style: italic;
+  color: midnightblue;
+  margin: 0px;
+  font-size: 30px;
+}
+

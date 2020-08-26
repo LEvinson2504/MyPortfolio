@@ -1,0 +1,8 @@
+body {
+  background-color: #1172e4;
+}
+.container {
+  width: 70vw;
+  /* display: grid; */
+  /* grid-template-columns: auto 30vw; */
+}

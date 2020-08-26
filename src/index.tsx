@@ -15,7 +15,7 @@ import {
 ReactDOM.render(
   <React.StrictMode>
     <div className="container">
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Nav />
         <Route exact path="/" component={Home} />
         <Route path="/projects" component={Projects} />

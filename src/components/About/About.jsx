@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./About.module.css";
 import styled from "styled-components";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
-
+import { LazyLoadImage } from "react-lazy-load-image-component";
 // prettier-ignore
 const Skills = styled.div`
   border: solid 1px purple;
@@ -27,9 +27,9 @@ const About = () => {
     <>
       <div className={styles.sidebar}>
         <div>
-          <img
+          <LazyLoadImage
             className={styles.profileimg}
-            src="/images/profile.png"
+            src="images/profile.png"
             alt="profile"
           />
         </div>

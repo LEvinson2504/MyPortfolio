@@ -1,11 +1,7 @@
 import React from "react";
 import styles from "./About.module.css";
 import styled from "styled-components";
-import {
-  FaInstagram,
-  FaGithub,
-  FaLinkedin
-} from 'react-icons/fa';
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 
 // prettier-ignore
 const Skills = styled.div`
@@ -19,9 +15,11 @@ const Skills = styled.div`
 // create a social component for socials
 
 const Social = () => {
-  return <div> 
-    <h3>feel free to reach out</h3>
-  </div>;
+  return (
+    <div>
+      <h3>feel free to reach out</h3>
+    </div>
+  );
 };
 
 const About = () => {
@@ -29,11 +27,12 @@ const About = () => {
     <>
       <div className={styles.sidebar}>
         <div>
-          <img 
+          <img
             className={styles.profileimg}
-            src="../../images/profile.png" 
-            alt="profile" />
-          </div>
+            src="/images/profile.png"
+            alt="profile"
+          />
+        </div>
         <h1 className={styles.profile_name}>Levinson D'souza</h1>
         <div className={styles.skills_container}>
           <Skills color="#ff6666"> React.js </Skills>
@@ -44,9 +43,9 @@ const About = () => {
           <Skills color="orange"> Python </Skills>
           <Skills color="green"> Vim </Skills>
         </div>
-        <Social className={styles.social} /> 
+        <Social className={styles.social} />
         <div>
-          <FaInstagram size="3em"/>
+          <FaInstagram size="3em" />
           <FaGithub size="3em" />
           <FaLinkedin size="3em" />
         </div>

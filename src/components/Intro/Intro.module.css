@@ -7,8 +7,8 @@
 }
 
 .intro h1 {
-  font-family: "prata", sans-serif;
-  font-size: 100px;
+  font-family: "prata", Arial, Helvetica, sans-serif;
+  font-size: 80px;
   color: ghostwhite;
 }
 
@@ -18,4 +18,3 @@
   margin: 0px;
   font-size: 30px;
 }
-

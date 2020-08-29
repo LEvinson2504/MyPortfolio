@@ -31,6 +31,7 @@ const About = () => {
             className={styles.profileimg}
             src="images/profile.png"
             alt="profile"
+            effect="opacity"
           />
         </div>
         <h1 className={styles.profile_name}>Levinson D'souza</h1>

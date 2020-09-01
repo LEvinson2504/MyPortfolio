@@ -3,14 +3,31 @@ import styles from "./About.module.css";
 import styled from "styled-components";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+
+import { Text, Flex, Badge } from "@chakra-ui/core";
 // prettier-ignore
-const Skills = styled.div`
-  border: solid 1px purple;
-  padding: 2px 6px;
-  margin: 8px 2px;
-  border-radius: 3px;
-  background-color: ${props => props.color};
-`;
+
+const skills = [
+  "React.js",
+  "Javascript ES6",
+  "Typescript",
+  "python",
+  "vim"
+]
+
+const Skill = ({ title, color }) => {
+  return (
+    <Badge
+      variant="outline"
+      variantColor={color}
+      fontSize="1em"
+      m="5px"
+      fontFamily="helvetica"
+    >
+      {title}
+    </Badge>
+  );
+};
 
 // create a social component for socials
 
@@ -24,34 +41,34 @@ const Social = () => {
 
 const About = () => {
   return (
-    <>
-      <div className={styles.sidebar}>
-        <div>
-          <LazyLoadImage
-            className={styles.profileimg}
-            src="images/profile.png"
-            alt="profile"
-            effect="opacity"
-          />
-        </div>
-        <h1 className={styles.profile_name}>Levinson D'souza</h1>
-        <div className={styles.skills_container}>
-          <Skills color="#ff6666"> React.js </Skills>
-          <Skills color="#ccffcc"> JavaScript (ES6) </Skills>
-          <Skills color="limegreen"> Typescript </Skills>
-          <Skills color="lightblue"> SQL & NoSQL </Skills>
-          <Skills color="limegreen"> DS & Alg. </Skills>
-          <Skills color="orange"> Python </Skills>
-          <Skills color="green"> Vim </Skills>
-        </div>
-        <Social className={styles.social} />
-        <div>
-          <FaInstagram size="3em" />
-          <FaGithub size="3em" />
-          <FaLinkedin size="3em" />
-        </div>
+    <Flex className={styles.sidebar}>
+      <div>
+        <LazyLoadImage
+          className={styles.profileimg}
+          src="images/profile.png"
+          alt="profile"
+          effect="opacity"
+        />
       </div>
-    </>
+      <Text fontSize="40px" px="2vw">
+        Levinson D'souza
+      </Text>
+      <Flex wrap="wrap" justifyContent="center">
+        <Skill title="Javascript (ES6)" color="red" />
+        <Skill title="Typescript" color="blue" />
+        <Skill title="Python" color="green" />
+        <Skill title="node.js" color="yellow" />
+      </Flex>
+      <Flex>
+        <Badge variant>React.js</Badge>
+      </Flex>
+      <Social className={styles.social} />
+      <div>
+        <FaInstagram size="3em" />
+        <FaGithub size="3em" />
+        <FaLinkedin size="3em" />
+      </div>
+    </Flex>
   );
 };
 

@@ -3,8 +3,7 @@ import styles from "./About.module.css";
 import styled from "styled-components";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-
-import { Text, Flex, Badge } from "@chakra-ui/core";
+import { Text, Flex, Badge, Stack } from "@chakra-ui/core";
 // prettier-ignore
 
 const skills = [
@@ -22,6 +21,7 @@ const Skill = ({ title, color }) => {
       variantColor={color}
       fontSize="1em"
       m="5px"
+      p="3px"
       fontFamily="helvetica"
     >
       {title}
@@ -45,7 +45,7 @@ const About = () => {
       <div>
         <LazyLoadImage
           className={styles.profileimg}
-          src="images/profile.png"
+          src={process.env.PUBLIC_URL + "/images/profile.png"}
           alt="profile"
           effect="opacity"
         />
@@ -53,21 +53,21 @@ const About = () => {
       <Text fontSize="40px" px="2vw">
         Levinson D'souza
       </Text>
+
       <Flex wrap="wrap" justifyContent="center">
         <Skill title="Javascript (ES6)" color="red" />
         <Skill title="Typescript" color="blue" />
         <Skill title="Python" color="green" />
         <Skill title="node.js" color="yellow" />
       </Flex>
-      <Flex>
-        <Badge variant>React.js</Badge>
-      </Flex>
+
       <Social className={styles.social} />
-      <div>
+
+      <Stack isInline>
         <FaInstagram size="3em" />
         <FaGithub size="3em" />
         <FaLinkedin size="3em" />
-      </div>
+      </Stack>
     </Flex>
   );
 };

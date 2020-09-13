@@ -17,11 +17,11 @@ const skills = [
 const Skill = ({ title, color }) => {
   return (
     <Badge
-      variant="outline"
+      variant="solid"
       variantColor={color}
       fontSize="1em"
-      m="5px"
-      p="3px"
+      m="7px"
+      p="5px"
       fontFamily="helvetica"
     >
       {title}
@@ -56,9 +56,14 @@ const About = () => {
 
       <Flex wrap="wrap" justifyContent="center">
         <Skill title="Javascript (ES6)" color="red" />
-        <Skill title="Typescript" color="blue" />
+        <Skill title="Typescript" color="yellow" />
+        <Skill title="React" color="blue" />
         <Skill title="Python" color="green" />
-        <Skill title="node.js" color="yellow" />
+        <Skill title="Vue.js" color="red" />
+        <Skill title="node.js" color="green" />
+        <Skill title="OOP" color="red" />
+        <Skill title="DS & Algo" color="blue" />
+        <Skill title="SQL and NoSQL" color="yellow" />
       </Flex>
 
       <Social className={styles.social} />

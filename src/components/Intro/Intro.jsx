@@ -1,16 +1,19 @@
 import React from "react";
-import styles from "./Intro.module.css";
+import { Box, Text } from "@chakra-ui/core";
 
 const Intro = () => {
   return (
-    <div className={styles.intro}>
-      <h1 className={styles.title}>
-        Hi, I'm<br />
+    <Box p={5} h="100%" mt="14em" mx="5vw">
+      <Text fontSize="7vw" color="white" fontFamily="prata">
+        Hi, I'm
+        <br />
         Levinson D'souza
-      </h1>
-      <p className={styles.subtext}> I like creating web projects, learning and trying out new things, finding out why something works or why not. 
-        </p>
-    </div>
+      </Text>
+      <Text fontSize="2vw" w="50%" fontStyle="italic" fontFamily="prata">
+        I like creating web projects, learning and trying out new things,
+        finding out why something works or why not.
+      </Text>
+    </Box>
   );
 };
 export default Intro;

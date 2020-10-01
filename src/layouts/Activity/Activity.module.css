@@ -1,6 +1,6 @@
 .container {
   position: absolute;
-  top: 50px;
+  top: 60px;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -38,8 +38,7 @@
   margin-left: 10px;
 }
 
-.date{
+.date {
   margin-left: 10px;
-  font-size: 10px
+  font-size: 10px;
 }
-

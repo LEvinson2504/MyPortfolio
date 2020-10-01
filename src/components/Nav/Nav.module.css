@@ -44,15 +44,14 @@
 }
 
 /*link font color*/
-a:link{
-  color: whitesmoke;
-  text-decoration: none;
-
-}
-a:visited{
+.link {
   color: whitesmoke;
   text-decoration: none;
 }
-a:active{
+.link:visited {
+  color: whitesmoke;
+  text-decoration: none;
+}
+.link:active {
   color: black;
 }

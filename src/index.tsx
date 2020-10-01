@@ -4,19 +4,23 @@ import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import { Route, BrowserRouter } from "react-router-dom";
 import { Home, Projects, Nav, Activity, MyStuff, About } from "./components";
+import { ThemeProvider, CSSReset, Box } from "@chakra-ui/core";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <div className="container">
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <Nav />
-        <Route exact path="/" component={Home} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/activity" component={Activity} />
-        <Route path="/mystuff" component={MyStuff} />
-      </BrowserRouter>
-    </div>
-  </React.StrictMode>,
+  <ThemeProvider>
+    <CSSReset />
+    <React.StrictMode>
+      <Box>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
+          <Nav />
+          <Route exact path="/" component={Home} />
+          <Route path="/projects" component={Projects} />
+          <Route path="/activity" component={Activity} />
+          <Route path="/mystuff" component={MyStuff} />
+        </BrowserRouter>
+      </Box>
+    </React.StrictMode>
+  </ThemeProvider>,
   document.getElementById("root")
 );
 

@@ -7,7 +7,6 @@ const Nav: React.FC = () => {
     <div>
       <ul className={styles.header}>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/projects">My Projects</Link></li>
         <li><Link to="/activity">My Activity</Link></li>
         <li><Link to="/mystuff">What I'm upto</Link></li>
       </ul>
